@@ -1,0 +1,151 @@
+.business-section {
+  padding: 40px 0;
+  background-color: #fdfdfd;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Register Banner */
+.register-banner {
+  margin: 0 auto 30px auto;
+  text-align: center;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.register-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.business-heading {
+  max-width: 1200px;
+  margin: 0 auto 30px;
+  padding: 0 20px;
+}
+
+.business-heading p {
+    font-family: 'Merriweather', serif;
+    font-size: clamp(1.23rem, 1.03vw + 1.07rem, 2.01rem);
+    font-weight: 250;
+    color: #3a3a3a;
+}
+
+.business-heading h1 {
+ font-family: Lato, sans-serif;
+    font-size: clamp(2.57rem, 2.55vw + 1.92rem, 3.5rem);
+    font-weight: 700;
+    margin-top: 0;
+    color: #000;
+}
+
+/* Card Carousel */
+.card-carousel-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto 0;
+  padding: 0 20px;
+}
+
+.card-wrapper {
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.card {
+  background:#f9f9f9;
+  padding: 33px;
+  border-radius: 14px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.card-top {
+  margin-bottom: 20px;
+}
+
+.card-image {
+  height: 60px;
+  margin-bottom: 15px;
+}
+
+.card-title {
+  font-size: 20px;
+  color: #ff6b00;
+  margin: 0 0 10px 0;
+}
+
+.card-content {
+  font-size: 15px;
+  color: #555;
+  line-height: 1.5;
+  margin: 0;
+}
+
+/* Slick Carousel adjustments */
+.slick-slide {
+  height: auto;
+}
+
+.slick-list {
+  margin: 0 -15px;
+  padding: 20px 0;
+}
+
+/* Responsive styles */
+@media (max-width: 1024px) {
+  .business-heading h1 {
+    font-size: 28px;
+  }
+
+  .card {
+    padding: 20px 15px;
+  }
+
+  .card-title {
+    font-size: 18px;
+  }
+
+  .card-content {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .business-section {
+    padding: 30px 0;
+  }
+
+  .business-heading h1 {
+    font-size: 24px;
+  }
+
+  .business-heading p {
+    font-size: 16px;
+  }
+
+  .card-wrapper {
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .card {
+    padding: 15px 10px;
+  }
+}
