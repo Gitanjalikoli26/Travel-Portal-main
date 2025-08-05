@@ -1,0 +1,35 @@
+.why-akbar-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 40px;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.why-akbar-left img {
+  max-width: 100%;
+  height: 500px;
+}
+
+.why-akbar-right {
+  flex: 1;
+  min-width: 300px;
+}
+
+.why-akbar-right h2 {
+  font-family: Lato, sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    color: #000;
+    margin-top: 0;
+}
+
+.why-akbar-right p {
+ font-family: Lato, sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    color: #525252;
+    margin-top: 20px;
+    line-height: 22px;
+}

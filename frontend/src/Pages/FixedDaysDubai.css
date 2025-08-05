@@ -1,0 +1,306 @@
+/* src/components/FixedDaysDubai/FixedDaysDubai.css */
+
+/* ========== CSS Variables (Custom Properties) ========== */
+:root {
+  --primary-blue: #0056b3;
+  --dark-blue: #003366;
+  --highlight-yellow: #ffcc00;
+  --orange-accent: #ff9800;
+  --green-accent: #28a745;
+  --dark-green-hover: #218838;
+  --light-bg-gray: #f0f2f5;
+  --white: #fff;
+  --black: #000;
+  --text-dark: #333;
+  --text-medium: #555;
+  --text-light: #777;
+  --light-gray-border: #e0e0e0;
+  --light-blue-bg: #e0f7fa;
+  --light-input-bg: #e9ecef;
+  --input-border: #ced4da;
+  --star-gold: #ffc107;
+
+  --spacing-xxs: 5px;
+  --spacing-xs: 8px;
+  --spacing-s: 10px;
+  --spacing-m: 15px;
+  --spacing-l: 20px;
+  --spacing-xl: 25px;
+  --spacing-xxl: 30px;
+  --spacing-xxxl: 40px;
+
+  --border-radius-s: 5px;
+  --border-radius-m: 8px;
+  --border-radius-l: 12px;
+  --border-radius-circle: 50%;
+
+  --shadow-light: 0 2px 8px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 4px 10px rgba(0, 0, 0, 0.05);
+  --shadow-strong: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ========== Global Styles & Page Layout ========== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  background-color: var(--light-bg-gray);
+  color: var(--text-dark);
+}
+
+.fixed-days-dubai {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+h1, h2, h3 {
+  margin: 0;
+  color: var(--text-dark);
+}
+
+.btn {
+  background-color: var(--primary-blue);
+  color: var(--white);
+  padding: 8px 15px;
+  border: none;
+  border-radius: var(--border-radius-s);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #0056b3;
+}
+
+.input {
+  padding: 8px 12px;
+  border: 1px solid var(--input-border);
+  border-radius: var(--border-radius-s);
+  font-size: 0.9rem;
+}
+
+/* ========== Header Section - FIXING THE ALIGNMENT ========== */
+.header {
+  display: flex;
+  justify-content: space-between; /* Pushes the logo and buttons to opposite ends */
+  align-items: center; /* Vertically centers the items */
+  padding: 1rem 0;
+  background-color: var(--white);
+  box-shadow: var(--shadow-light);
+  border-radius: var(--border-radius-m);
+  margin-top: 20px;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+}
+
+.header-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* Adds space between each button and input */
+}
+
+/* ========== Hero Banner Section ========== */
+.hero-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: var(--spacing-xxxl);
+  background-color: var(--dark-blue);
+  color: var(--white);
+  padding: var(--spacing-xxl);
+  border-radius: var(--border-radius-m);
+}
+
+.hero-content {
+  flex: 1;
+}
+
+.hero-content h1 {
+  font-size: 2.5rem;
+  color: var(--white);
+  margin-bottom: var(--spacing-m);
+}
+
+.hero-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.carousel {
+  display: flex;
+  gap: var(--spacing-s);
+}
+
+.carousel img {
+  width: 150px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: var(--border-radius-s);
+}
+
+/* ========== Trending Section ========== */
+.trending, .recommended, .search-packages, .experts, .testimonials, .agency-app, .faq, .gallery, footer {
+  margin-top: var(--spacing-xxxl);
+  padding: var(--spacing-l) 0;
+}
+
+.trending h2, .recommended h2, .search-packages h2, .experts h2, .testimonials h2, .agency-app h2, .faq h2, .gallery h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: var(--spacing-l);
+}
+
+.scroll-section {
+  display: flex;
+  overflow-x: auto;
+  gap: var(--spacing-l);
+  padding: var(--spacing-s);
+}
+
+.card {
+  flex: 0 0 250px;
+  background-color: var(--white);
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+}
+
+.card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.card h3, .card button {
+  padding: var(--spacing-s) var(--spacing-m);
+}
+
+/* ========== Recommended Section ========== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-l);
+}
+
+.package-card {
+  background-color: var(--white);
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+}
+
+.package-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.package-card h3, .package-card p, .package-card button {
+  padding: 0 var(--spacing-m);
+}
+
+/* ========== Search Packages Section ========== */
+.search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-m);
+  justify-content: center;
+  padding: var(--spacing-l);
+  background-color: var(--light-bg-gray);
+  border-radius: var(--border-radius-m);
+}
+
+.search-form input {
+  flex: 1;
+  min-width: 150px;
+}
+
+.package-results {
+  margin-top: var(--spacing-l);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-l);
+}
+
+.rating {
+  padding: var(--spacing-xxs) var(--spacing-m);
+}
+
+/* ========== Experts Section ========== */
+.experts .expert-card, .ontrip-banner {
+  background-color: var(--white);
+  padding: var(--spacing-l);
+  border-radius: var(--border-radius-m);
+  box-shadow: var(--shadow-medium);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-l);
+}
+
+.experts .expert-card img {
+  width: 80px;
+  height: 80px;
+  border-radius: var(--border-radius-circle);
+  object-fit: cover;
+}
+
+.ontrip-banner {
+  background-color: var(--dark-blue);
+  color: var(--white);
+}
+
+.ontrip-banner img {
+  width: 150px;
+  height: auto;
+}
+
+/* ========== Testimonials Section ========== */
+.testimonials .carousel {
+  justify-content: center;
+}
+
+.testimonial-card {
+  flex: 0 0 300px;
+  background-color: var(--white);
+  box-shadow: var(--shadow-medium);
+  border-radius: var(--border-radius-m);
+  overflow: hidden;
+  text-align: center;
+  padding-bottom: var(--spacing-m);
+}
+
+.testimonial-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+}
+
+.testimonial-card .rating, .testimonial-card p {
+  padding: 0 var(--spacing-m);
+}
+
+/* ========== Gallery Section ========== */
+.gallery .grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: var(--spacing-m);
+}
+
+.gallery .grid img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: var(--border-radius-m);
+}
+
+/* ========== Footer Section ========== */
+footer {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+  padding: var(--spacing-l) 0;
+}
